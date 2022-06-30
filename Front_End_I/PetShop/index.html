@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PetShop</title>
+
+    <!-- Estilos de la pagina -->
+    <link rel="stylesheet" href="./css/styles.css">
+
+    <!-- Fuentes Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+</head>
+
+<body>
+    <!----------------------------->
+    <!-- Encabezado de la pagina -->
+    <!----------------------------->
+    <header>
+        <div class="offers">
+            <div>
+                <p>Grandes ofertas en comederos</p>
+            </div>
+            <div class="off-select">
+                <select name="idioma" id="idioma">
+                    <option value="español">Español</option>
+                </select>
+                <select name="moneda" id="moneda">
+                    <option value="ARG">ARG$</option>
+                </select>
+            </div>
+        </div>
+        <nav class="nav-bar">
+            <div class="logo">
+                <a href="./index.html"><img src="./img/logo.png" alt=""></a>
+            </div>
+            <div class="nav-bar-link" id="nav-bar-link">
+                <ul>
+                    <li><i class="fa-solid fa-paw"></i><a href="#">Categorias</a></li>
+                    <li><i class="fa-solid fa-paw"></i><a href="#">Pets</a></li>
+                    <li><i class="fa-solid fa-paw"></i><a href="#">Nosotros</a></li>
+                    <li><i class="fa-solid fa-paw"></i><a href="#">Contactanos</a></li>
+                </ul>
+            </div>
+            <a href="#" class="toggle-bttn" id="toggle-bttn">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </a>
+        </nav>
+    </header>
+
+    <!----------------------------->
+    <!---- Cuerpo de la pagina ---->
+    <!----------------------------->
+    <main>
+        <section id="section-banner">
+            <div class="banner">
+                <div class="banner-info">
+                    <p class="banner-title">¡Es un placer tenerte aqui!</p>
+                    <p class="banner-text flex-center">¡Comedores en descuento!</p>
+                    <div class="banner-bttn flex-center">
+                        <button>Comedores</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección para los productos destacados -->
+        <section>
+            <!-- Logo de la patita y categorias -->
+            <div class="featured">
+                <img src="./img/logo_patita.png" alt="">
+                <h2>Productos destacados</h2>
+                <nav class="featured-nav-bar flex-center">
+                    <a href=""> Comedores </a>
+                    <p> - </p>
+                    <a href=""> Accesorios </a>
+                    <p> - </p>
+                    <a href=""> Comida </a>
+                </nav>
+            </div>
+
+            <!-- Contenedor con cada articulo -->
+            <div class="container-articles flex-center">
+                <div class="article">
+                    <img src="./img/juguete_churrasquito.jpg" alt="">
+                    <p class="articulo-name">Juguete Churrasquito</p>
+                    <p class="articulo-price">$150</p>
+                </div>
+                <div class="article">
+                    <img src="./img/comedero_para_perro.jpg" alt="">
+                    <p class="articulo-name">Comedero para perro</p>
+                    <p class="articulo-price">$250</p>
+                </div>
+                <div class="article">
+                    <img src="./img/juguete_huesito.jpg" alt="">
+                    <p class="articulo-name">Juguete Huesito</p>
+                    <p class="articulo-price">$650</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección para el formulario de contactos -->
+        <section>
+            <div class="form-contact flex-center">
+                <form action="" method="">
+                    <h2>Contáctanos</h2>
+                    <input type="text" name="" id="" placeholder="Nombre y Apellido">
+                    <input type="email" name="" id="" placeholder="Ingresa tu correo electrónico">
+                    <input type="" name="" id="" placeholder="Teléfono">
+
+                    <!-- Botones de enviar y resetear -->
+                    <div class="form-bttns">
+                        <button type="reset"> Resetear </button>
+                        <button type="submit"> Enviar </button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!----------------------------->
+    <!------- Pie de pagina ------->
+    <!----------------------------->
+    <footer>
+        <div class="suscription">
+            <div class="sus-txt">
+                <img src="./img/icons/enviar-correo.svg" alt="">
+                <p>Suscríbete para más novedades</p>
+            </div>
+            <div class="sus-form">
+                <form action="">
+                    <input type="email" name="email" value="Ingresá tu correo electronico">
+                    <button type="submit" name="">Suscribeme</button>
+                </form>
+            </div>
+        </div>
+        <div class="more-info">
+            <div class="info">
+                <div class="line-info">
+                    <div class="line-icon">
+                        <img src="./img/icons/location.svg" alt="">
+                    </div>
+                    <div class="line-info-txt">
+                        <p>Localidad</p>
+                        <p>Calle-Provincia</p>
+                    </div>
+                </div>
+                <div class="line-info">
+                    <div class="line-icon">
+                        <img src="./img/icons/phone.svg" alt="">
+                    </div>
+                    <div class="line-info-txt">
+                        <p>Teléfono</p>
+                        <p>Número de teléfono</p>
+                    </div>
+                </div>
+                <div class="line-info">
+                    <div class="line-icon">
+                        <img src="./img/icons/correo-electronico.svg" alt="">
+                    </div>
+                    <div class="line-info-txt">
+                        <p>Correo Electrónico</p>
+                        <p>Dirección de correo</p>
+                    </div>
+                </div>
+            </div>
+            <div class="logo">
+                <a href="./index.html"><img src="./img/logo_revertido.png" alt=""></a>
+            </div>
+        </div>
+        <div class="copyright flex-center">
+            <p>Todos los derechos reservados Front End</p>
+        </div>
+    </footer>
+
+    <!------------->
+    <!-- Scripts -->
+    <!------------->
+    <!-- Iconos -->
+    <script src="https://kit.fontawesome.com/99a2b445a2.js" crossorigin="anonymous"></script>
+
+    <!-- Index -->
+    <script src="./js/index.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

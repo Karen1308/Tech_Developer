@@ -1,0 +1,22 @@
+/**************************************************************/
+/********** AQUI COMIENZA LA SECCION DEL FORMULARIO **********/
+/************************************************************/
+#add-card {
+    width: 70vw;
+    height: 75vh;
+    margin: auto;
+    background-color: var(--primary-bg-color);
+    box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.3);
+    border-radius: 50px;
+}
+
+.header{
+    text-align: center;
+    padding-top: 20px;
+}
+
+.header p,
+.header h1{
+    color: var(--primary-txt-color);
+    margin: 10px;
+}

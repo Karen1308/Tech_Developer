@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;700&display=swap');
+
+/* font-family: 'Roboto', sans-serif; */
+
+/* Variables para los colores */
+:root {
+    --border-radius-bttn: 50px;
+    --primary-txt-color: #232C50;
+    --primary-bg-orange-color: #F3603C;
+    --primary-hover-bttn: #ff9b82;
+    --second-txt-color: #B3B2B7;
+}
+
+/* Reglas genericas para todos los elementos*/
+* {
+    box-sizing: border-box;
+    font-family: 'Be Vietnam', sans-serif;
+    font-style: normal;
+    list-style: none;
+    line-height: 1;
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+}
+
+/* Reglas genericas para etiquetas html */
+html {
+    font-size: 18px;
+}
+
+body {
+    margin: 0px 10%;
+}
+
+section {
+    justify-content: space-between;
+    margin: 10px 10%;
+}
+
+/* Formato para los h1 */
+h1 {
+    font-size: 4rem;
+}
+
+/* Formato para los h2 */
+h2 {
+    font-size: 2rem;
+    line-height: 1.5;
+}
+
+/* Formato por defecto para los botones */
+button {
+    background: var(--primary-bg-orange-color);
+    border-radius: var(--border-radius-bttn);
+    border: none;
+    box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.25);
+    color: #ffffff;
+    height: 50px;
+    margin: 10px;
+    width: 140px;
+}
+
+button:hover {
+    background-color: var(--primary-hover-bttn);
+    cursor: pointer;
+}
+
+/* Clase para centrar */
+.flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/**************************************************/
+/********** AQUI COMIENZA EL ENCABEZADO **********/
+/************************************************/
+.nav-bar {
+    height: 150px;
+    justify-content: space-between;
+}
+
+.nav-bar .logo {
+    margin: auto 0px;
+    margin-left: 30px;
+}
+
+.nav-bar-link ul {
+    align-items: center;
+    display: flex;
+    height: 100%;
+}
+
+.nav-bar-link li {
+    height: 70%;
+    margin: 0px 10px;
+    padding: 0px 10px;
+}
+
+.nav-bar .nav-bar-link li:hover a {
+    color: #b09a9a;
+}
+
+.nav-bar button {
+    margin-right: 40px;
+}
+
+/* 3 barritas para el menu mobile */
+.toggle-bttn {
+    display: none;
+    flex-direction: column;
+    height: 20px;
+    justify-content: space-between;
+    position: absolute;
+    right: 2rem;
+    top: 2rem;
+    width: 30px;
+}
+
+.toggle-bttn .bar {
+    background-color: #000000;
+    border-radius: 10px;
+    height: 3px;
+    width: 100%;
+}
+
+/**************************************************/
+/********* AQUI COMIENZAN LAS SECCIONES **********/
+/************************************************/
+/* Primer seccion con graficas */
+.products p {
+    width: 60%;
+    margin: 10px;
+    line-height: 2;
+}
+
+/* Seccion para la lista de puntos */
+.point{
+    display: flex;
+}
+
+.point-number{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary-bg-orange-color);
+    border-radius: var(--border-radius-bttn);
+    border: none;
+    color: #ffffff;
+    height: 40px;
+    padding: 10px;
+    width: 70px;
+}
+
+.point-txt{
+    color: var(--second-txt-color);
+    font-size: .8rem;
+}
+
+/**************************************************/
+/********* AQUI COMIENZAN LAS MEDIAQUERIS ********/
+/************************************************/
+@media(max-width: 375px) {
+    #nav-bar-bttn {
+        display: none;
+    }
+
+    .toggle-bttn {
+        display: flex;
+    }
+
+    .nav-bar-link {
+        display: none;
+        height: 100%;
+        margin-left: 10px;
+        width: 100%;
+    }
+
+    .nav-bar-link ul {
+        align-items: flex-start;
+        flex-direction: column;
+        height: 150px;
+        position: relative;
+        top: 60px;
+        z-index: 99;
+    }
+
+    .nav-bar-link li {
+        margin: 10px 0px;
+        width: 100%;
+    }
+
+    .nav-bar-link.active {
+        display: flex;
+    }
+}

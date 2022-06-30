@@ -1,0 +1,298 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap');
+
+:root {
+    --primary-bg-color: #00669F;
+    --primary-txt-color: #ffffff;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    text-decoration: none;
+    list-style: none;
+}
+
+main {
+    padding: 20px;
+    margin: auto;
+}
+
+html {
+    font-size: 14px;
+}
+
+h1{
+    font-weight: 700;
+    font-size: 4rem;
+}
+
+/**************************************************/
+/********** AQUI COMIENZA EL ENCABEZADO **********/
+/************************************************/
+.discounts {
+    padding: 10px;
+    background-color: #1CD1B0;
+}
+
+header {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    height: 100px;
+    background-color: var(--primary-bg-color);
+    box-shadow: 0px 10px 7px rgba(0, 0, 0, 0.25);
+    z-index: 99;
+}
+
+.logo {
+    display: flex;
+    margin-left: 30px;
+}
+
+.logo a {
+    color: var(--primary-txt-color);
+}
+
+.logo a:hover {
+    color: black;
+}
+
+.nav-bar-link ul {
+    display: flex;
+    justify-content: flex-end;
+    background: #001D2D;
+    height: 40px;
+}
+
+.nav-bar-link li{
+    margin: 10px;
+}
+
+.nav-bar-link a {
+    font-size: 1rem;
+    color: var(--primary-txt-color);
+    text-transform: uppercase;
+}
+
+/**************************************************/
+/********** AQUI COMIENZAN LAS TARJETAS **********/
+/************************************************/
+.card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.card {
+    width: 450px;
+    height: auto;
+    padding: 0px 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background-color: #F3F3F3;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.card-header {
+    height: 200px;
+    margin-bottom: 100px;
+}
+
+.front-page img {
+    width: 450px;
+    height: 220px;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.like {
+    position: absolute;
+    left: 10px;
+    top: 20px;
+}
+
+.like img {
+    width: 40px;
+    height: 40px;
+}
+
+.picture {
+    position: absolute;
+    top: 130px;
+    left: 150px;
+}
+
+.picture img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.card-body {
+    min-height: 400px;
+    text-align: center;
+}
+
+.info-text h2 {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 35px;
+}
+
+.info-text p {
+    text-align: justify;
+    font-size: 1rem;
+    line-height: 35px;
+    padding: 10px;
+}
+
+.info-bttn {
+    position: absolute;
+    bottom: 20px;
+    left: 125px;
+}
+
+.info-bttn button {
+    width: 200px;
+    height: 60px;
+    background-color: #D1891C;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border: none;
+    font-size: 1.5rem;
+    color: var(--primary-txt-color);
+}
+
+/**************************************************/
+/************* BOTÓN AGREGAR TARJETA *************/
+/************************************************/
+.bttn-add {
+    position: fixed;
+    right: 45px;
+    bottom: 100px;
+    background-color: var(--primary-bg-color);
+    width: 70px;
+    height: 70px;
+    border-radius: 100%;
+}
+
+.bttn-add p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+    height: 100%;
+}
+
+.bttn-add a {
+    color: var(--primary-txt-color);
+}
+
+.bttn-add:hover {
+    background-color: #1f99e0;
+}
+
+/**************************************************/
+/******** AQUI COMIENZA EL PIE DE PAGINA *********/
+/************************************************/
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    padding: 10px;
+    background-color: var(--primary-bg-color);
+    color: var(--primary-txt-color);
+}
+
+footer .copyright {
+    text-align: center;
+}
+
+footer img {
+    width: 124px;
+    height: 35px;
+    margin: 10px;
+}
+
+/**************************************************/
+/********* AQUI COMIENZAN LAS MEDIAQUERIS ********/
+/************************************************/
+@media (max-width: 834px) {
+    main {
+        width: 100%;
+    }
+
+    .card,
+    .front-page img {
+        width: 300px;
+    }
+
+    .card-header {
+        height: 170px;
+    }
+
+    .front-page img {
+        height: 200px;
+    }
+
+    .like img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .picture {
+        top: 140px;
+        left: 90px;
+    }
+
+    .picture img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .card-body {
+        min-height: 320px;
+    }
+
+    .info-text p {
+        line-height: 20px;
+        padding: 0px;
+    }
+
+    .info-bttn {
+        left: 95px;
+    }
+
+    .info-bttn button {
+        width: 110px;
+        height: 50px;
+        font-size: 1rem;
+        background-color: var(--primary-bg-blue);
+    }
+
+    .bttn-add {
+        bottom: 80px;
+        right: 20px;
+        width: 50px;
+        height: 50px;
+    }
+}
+
+@media (min-width: 1000px) {
+    main {
+        width: 1500px;
+    }
+}
