@@ -37,6 +37,14 @@ h2 {
     text-align: center;
 }
 
+input {
+    border: none;
+    border-radius: var(--border-radius-bttn);
+    height: 45px;
+    color: var(--second-txt-color);
+    text-indent: 20px;
+}
+
 /* Formato por defecto para los botones */
 button {
     background: var(--primary-bg-orange-color);
@@ -52,6 +60,12 @@ button {
 button:hover {
     background-color: var(--primary-hover-bttn);
     cursor: pointer;
+}
+
+/* Formato para botones invertidos */
+.bttn-invert {
+    background-color: #ffffff;
+    color: var(--primary-bg-orange-color);
 }
 
 /* Clase para centrar */
@@ -203,7 +217,7 @@ section {
 }
 
 /* Para que se muestre el primer slide */
-.active {
+.active-opinion {
     display: block;
 }
 
@@ -228,17 +242,17 @@ section {
     font-weight: 700;
 }
 
-.bttn-get{
+.bttn-get {
     width: 100%;
     text-align: center;
 }
 
 /* Formato para los botones del slide */
-.nav-slide{
+.nav-slide {
     text-align: center;
 }
 
-.nav-slide .circle{
+.nav-slide .dot {
     width: 10px;
     height: 10px;
     border-radius: 100%;
@@ -246,10 +260,86 @@ section {
     border: 2px solid var(--primary-bg-orange-color);
     box-shadow: none;
     margin: 5px;
+    transition: all 3ms ease;
 }
 
-.nav-slide .circle:hover{
+.nav-slide .dot:hover,
+.dot-active {
+    background-color: var(--primary-bg-orange-color) !important;
+}
+
+/**************************************************/
+/********* AQUI COMIENZAN EL FOOTER **************/
+/************************************************/
+.team {
     background-color: var(--primary-bg-orange-color);
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.team h2 {
+    color: #ffffff;
+    margin: 20px 0px;
+}
+
+.info {
+    background-color: #1E1E26;
+    text-align: center;
+}
+
+/* Formulario */
+.info form {
+    padding: 40px 0px 20px;
+    text-align: center;
+}
+
+.info form button {
+    text-transform: uppercase;
+    width: 90px;
+}
+
+/* Links en el footer */
+.info nav {
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+}
+
+.info nav ul {
+    margin: 20px;
+}
+
+.info nav li {
+    margin: 20px;
+    text-align: left;
+}
+
+/* Redes sociales iconos */
+.social-media {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+
+.social-media img {
+    height: 30px;
+    width: 30px;
+    margin: 10px;
+}
+
+.social-media img:hover{
+    color: var(--primary-hover-bttn);
+}
+
+.info .logo {
+    width: 200px;
+    color: #ffffff;
+    padding: 20px 0px;
+}
+
+.info .copyright {
+    color: #8C8C94;
+    padding: 20px 0px;
 }
 
 /**************************************************/
@@ -346,18 +436,95 @@ section {
     }
 
     /* Ajustando contactos */
-    .opinion-container{
+    .opinion-container {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
     }
 
-    .opinion{
+    .opinion {
         width: 20vw;
     }
 
     /* Ocultamos navegacion del slide de contactos */
-    .nav-slide{
+    .nav-slide {
         display: none;
+    }
+
+    .opinion {
+        display: block;
+    }
+
+    /* Ajustando el footer */
+    .team {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .team h2 {
+        text-align: left;
+        width: 450px;
+        margin: 0px 10vw;
+    }
+
+    .team button {
+        margin: 0px 10vw;
+    }
+
+    .info {
+        align-items: center;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+    }
+
+    .info .cell {
+        margin: 0px auto;
+    }
+
+    /* Form y copyright al final */
+    /* Formulario */
+    .info :nth-child(1) {
+        order: 2;
+    }
+
+    /* Copyright */
+    .info :nth-child(4) {
+        order: 1;
+    }
+
+    /* Links */
+    .info :nth-child(2) {
+        order: 3;
+    }
+
+    /* Logo y redes sociales */
+    .info :nth-child(3) {
+        order: 4;
+    }
+
+    .social-logo {
+        align-items: center;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+    }
+
+    .cell .copyright {
+        bottom: -60px;
+        position: relative;
+    }
+
+    .info .form {
+        top: -15px;
+        position: relative;
+        right: -200px;
+    }
+
+    .cell nav,
+    .social-logo{
+        right: -200px;
+        position: relative;
     }
 }
