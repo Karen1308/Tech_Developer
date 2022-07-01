@@ -197,8 +197,14 @@ section {
 /* Sección para los contactos */
 .opinion {
     background-color: #FAFAFA;
+    display: none;
     margin: 70px 10px 20px;
     text-align: center;
+}
+
+/* Para que se muestre el primer slide */
+.active {
+    display: block;
 }
 
 .avatar img {
@@ -227,6 +233,25 @@ section {
     text-align: center;
 }
 
+/* Formato para los botones del slide */
+.nav-slide{
+    text-align: center;
+}
+
+.nav-slide .circle{
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    background-color: white;
+    border: 2px solid var(--primary-bg-orange-color);
+    box-shadow: none;
+    margin: 5px;
+}
+
+.nav-slide .circle:hover{
+    background-color: var(--primary-bg-orange-color);
+}
+
 /**************************************************/
 /********* AQUI COMIENZAN LAS MEDIAQUERIS ********/
 /************************************************/
@@ -248,6 +273,7 @@ section {
         font-size: 2.5rem;
     }
 
+    /* Ajustando encabezado y barra de navegacion */
     #nav-bar-bttn {
         display: block;
     }
@@ -276,6 +302,7 @@ section {
         margin: 0px 10px;
     }
 
+    /* Ajustando primer seccion */
     #products {
         flex-direction: row;
         text-align: left;
@@ -293,6 +320,7 @@ section {
         width: 60%;
     }
 
+    /* Ajustando contenedores de la segunda seccion */
     #about {
         flex-direction: row;
         text-align: left;
@@ -303,6 +331,7 @@ section {
         margin: 0px 50px;
     }
 
+    /* Ajustando listado de puntos */
     .point-title {
         background-color: inherit;
     }
@@ -316,6 +345,7 @@ section {
         margin-left: 110px;
     }
 
+    /* Ajustando contactos */
     .opinion-container{
         display: flex;
         flex-wrap: wrap;
@@ -324,5 +354,10 @@ section {
 
     .opinion{
         width: 20vw;
+    }
+
+    /* Ocultamos navegacion del slide de contactos */
+    .nav-slide{
+        display: none;
     }
 }
