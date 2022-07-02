@@ -26,6 +26,11 @@
 }
 
 /* Reglas genericas para etiquetas html */
+body {
+    background-image: url('');
+    background-size: cover;
+}
+
 section:first-child {
     margin-top: 100px;
 }
@@ -73,6 +78,60 @@ button:hover {
     box-shadow: 0px 0px 0px 4px #ffffff inset;
 }
 
+
+/* Figuras en el fondo de la pantalla */
+.square {
+    background: linear-gradient(to right, #f3613c2f, #ff9b8200);
+    height: 500px;
+    position: absolute;
+    transform: rotate(-45deg);
+    transition: all 250ms ease-out;
+    width: 500px;
+    -webkit-transform: rotate(-45deg);
+    -webkit-transition: all 250ms ease-out;
+    z-index: -1;
+}
+
+.circle {
+    border-radius: 100%;
+    background: linear-gradient(to right, #232c5071, #232c5043);
+    height: 500px;
+    mix-blend-mode: multiply;
+    position: absolute;
+    transition: all 250ms ease-out;
+    transition-delay: 50ms;
+    width: 500px;
+    -webkit-transition: all 250ms ease-out;
+    -webkit-transition-delay: 50ms;
+    z-index: -1;
+}
+
+.figures {
+    position: sticky;
+    z-index: -1;
+}
+
+.top .square {
+    right: 60px;
+    top: -120px;
+}
+
+.top .circle {
+    right: -120px;
+    top: -100px;
+}
+
+.bottom .square {
+    top: -300px;
+    left: 60px;
+    transform: rotate(50deg);
+}
+
+.bottom .circle {
+    left: -160px;
+    top: -300px;
+}
+
 /* Formato para botones invertidos */
 .bttn-invert {
     background-color: #ffffff;
@@ -114,12 +173,12 @@ header {
     top: 30px;
 }
 
-.logo{
+.logo {
     margin: auto 0px;
     transition: all 300ms ease;
 }
 
-.logo:hover{
+.logo:hover {
     transform: scale(1.2);
 }
 
@@ -257,7 +316,7 @@ section {
 
 /* Sección para los contactos */
 .opinion {
-    background-color: #c7c7c794;
+    background-color: #c7c7c75e;
     box-shadow: #0000004f 0px 5px 15px;
     display: none;
     margin: 70px 15px 20px;
@@ -343,6 +402,22 @@ section {
 .info form {
     padding: 40px 0px 20px;
     text-align: center;
+}
+
+.form input {
+    outline: none;
+}
+
+.form input:focus::placeholder {
+    color: transparent;
+}
+
+.form input:invalid {
+    color: red;
+}
+
+.form input:valid {
+    color: #000000;
 }
 
 .info form button {
