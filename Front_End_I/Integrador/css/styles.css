@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 
 /* font-family: 'Roboto', sans-serif; */
 
@@ -25,6 +26,10 @@
 }
 
 /* Reglas genericas para etiquetas html */
+section:first-child {
+    margin-top: 100px;
+}
+
 /* Formato para los h1 */
 h1 {
     font-size: 2.5rem;
@@ -52,20 +57,31 @@ button {
     border: none;
     box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.25);
     color: #ffffff;
+    cursor: pointer;
     height: 50px;
     margin: 10px;
     width: 140px;
+
+    background-color: var(--primary-bg-orange-color);
+    overflow: hidden;
+    position: relative;
+    transition: all 150ms ease;
 }
 
 button:hover {
-    background-color: var(--primary-hover-bttn);
-    cursor: pointer;
+    border: 4px solid var(--primary-bg-orange-color);
+    box-shadow: 0px 0px 0px 4px #ffffff inset;
 }
 
 /* Formato para botones invertidos */
 .bttn-invert {
     background-color: #ffffff;
     color: var(--primary-bg-orange-color);
+}
+
+.bttn-invert:hover {
+    border: 4px solid white;
+    box-shadow: 0px 0px 0px 4px var(--primary-bg-orange-color) inset;
 }
 
 /* Clase para centrar */
@@ -78,40 +94,74 @@ button:hover {
 /**************************************************/
 /********** AQUI COMIENZA EL ENCABEZADO **********/
 /************************************************/
-.nav-bar {
+header {
+    background-color: #ffffff;
+    border-bottom: 4px solid var(--primary-bg-orange-color);
     height: 100px;
-    justify-content: space-between;
+    position: sticky;
+    top: 0px;
+    z-index: 99;
+}
+
+.nav-bar {
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 .nav-bar .logo {
-    margin: auto 0px;
     margin-left: 30px;
+    position: relative;
+    top: 30px;
+}
+
+.logo{
+    margin: auto 0px;
+    transition: all 300ms ease;
+}
+
+.logo:hover{
+    transform: scale(1.2);
 }
 
 .nav-bar-link {
+    animation: displayToLeft 1.5s;
+    background-color: var(--primary-bg-orange-color);
+    cursor: pointer;
     display: none;
+    position: relative;
+    top: 50px;
+    transition: all 1000ms ease-out;
+    width: 100%;
 }
 
 .nav-bar-link ul {
     align-items: flex-start;
     flex-direction: column;
-    height: 150px;
-    position: relative;
-    z-index: 99;
 }
 
 .nav-bar-link li {
     height: 50%;
-    margin: 10px 0px;
-    padding: 0px 10px;
+    padding: 20px;
+    transition: all 300ms ease;
 }
 
-/* .nav-bar-link.active {
-    display: flex;
-} */
+.nav-bar-link li a {
+    color: white;
+    transition: all 500ms ease-out;
+}
 
-.nav-bar .nav-bar-link li:hover a {
-    color: #b09a9a;
+.nav-bar-link li:hover {
+    background-color: var(--primary-hover-bttn);
+    transform: scale(1.2);
+    translate: 50px;
+}
+
+.nav-bar-link li:hover a {
+    padding-left: 30px;
+}
+
+.nav-bar-link.active {
+    display: block;
 }
 
 #nav-bar-bttn {
@@ -121,6 +171,7 @@ button:hover {
 
 /* 3 barritas para el menu mobile */
 .toggle-bttn {
+    cursor: pointer;
     display: flex;
     flex-direction: column;
     height: 20px;
@@ -154,10 +205,6 @@ section {
 .products p {
     margin: 10px 20px;
     line-height: 2;
-}
-
-.graphic img {
-    width: 100vw;
 }
 
 /* Sección para la lista */
@@ -210,18 +257,23 @@ section {
 
 /* Sección para los contactos */
 .opinion {
-    background-color: #FAFAFA;
+    background-color: #c7c7c794;
+    box-shadow: #0000004f 0px 5px 15px;
     display: none;
-    margin: 70px 10px 20px;
+    margin: 70px 15px 20px;
     text-align: center;
+    transition: 800ms ease all;
 }
 
 /* Para que se muestre el primer slide */
 .active-opinion {
-    display: block;
+    display: block !important;
+    animation: slideIn 4s;
 }
 
 .avatar img {
+    border-radius: 100%;
+    box-shadow: #0000004f 0px 5px 15px;
     position: relative;
     top: -50px;
     width: 100px;
@@ -260,7 +312,7 @@ section {
     border: 2px solid var(--primary-bg-orange-color);
     box-shadow: none;
     margin: 5px;
-    transition: all 3ms ease;
+    transition: 800ms ease all;
 }
 
 .nav-slide .dot:hover,
@@ -300,7 +352,6 @@ section {
 
 /* Links en el footer */
 .info nav {
-    color: #ffffff;
     display: flex;
     justify-content: center;
 }
@@ -314,6 +365,10 @@ section {
     text-align: left;
 }
 
+.info nav li a {
+    color: #ffffff;
+}
+
 /* Redes sociales iconos */
 .social-media {
     display: flex;
@@ -321,210 +376,104 @@ section {
     padding-bottom: 20px;
 }
 
-.social-media img {
-    height: 30px;
-    width: 30px;
+.social-media .icon {
+    position: relative;
+    background: #ffffff;
+    border-radius: 50%;
+    padding: 15px;
     margin: 10px;
+    width: 35px;
+    height: 35px;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
-.social-media img:hover{
-    color: var(--primary-hover-bttn);
-}
-
-.info .logo {
-    width: 200px;
+.social-media .tooltip {
+    position: absolute;
+    top: 0;
+    font-size: 14px;
+    background: #ffffff;
     color: #ffffff;
-    padding: 20px 0px;
+    padding: 5px 8px;
+    border-radius: 5px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.social-media .tooltip::before {
+    position: absolute;
+    content: "";
+    height: 8px;
+    width: 8px;
+    background: #ffffff;
+    bottom: -3px;
+    left: 50%;
+    transform: translate(-50%) rotate(45deg);
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.social-media .icon:hover .tooltip {
+    top: -45px;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.social-media .icon:hover span,
+.social-media .icon:hover .tooltip {
+    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+
+/* Mousover para facebook */
+.social-media .facebook:hover,
+.social-media .facebook:hover .tooltip,
+.social-media .facebook:hover .tooltip::before {
+    background: #1877F2;
+    color: #ffffff;
+}
+
+/* Mousover para twiter */
+.social-media .twitter:hover,
+.social-media .twitter:hover .tooltip,
+.social-media .twitter:hover .tooltip::before {
+    background: #1DA1F2;
+    color: #ffffff;
+}
+
+/* Mousover para instagram */
+.social-media .instagram:hover,
+.social-media .instagram:hover .tooltip,
+.social-media .instagram:hover .tooltip::before {
+    background: #E4405F;
+    color: #ffffff;
+}
+
+/* Mousover para youtube y pinterest */
+.social-media .youtube:hover,
+.social-media .youtube:hover .tooltip,
+.social-media .youtube:hover .tooltip::before,
+.social-media .pinterest:hover,
+.social-media .pinterest:hover .tooltip,
+.social-media .pinterest:hover .tooltip::before {
+    background: #CD201F;
+    color: #ffffff;
+}
+
+/* Logo y copyright */
+.info .logo {
+    padding: 10px 0px;
+    width: 200px;
 }
 
 .info .copyright {
     color: #8C8C94;
     padding: 20px 0px;
-}
-
-/**************************************************/
-/********* AQUI COMIENZAN LAS MEDIAQUERIS ********/
-/************************************************/
-@media(min-width: 1440px) {
-    body {
-        margin: 0px 10%;
-    }
-
-    section {
-        margin: 10px 10%;
-        width: auto;
-    }
-
-    h1 {
-        font-size: 4rem;
-    }
-
-    h2 {
-        font-size: 2.5rem;
-    }
-
-    /* Ajustando encabezado y barra de navegacion */
-    #nav-bar-bttn {
-        display: block;
-    }
-
-    .toggle-bttn {
-        display: none;
-    }
-
-    .nav-bar {
-        height: 150px;
-    }
-
-    .nav-bar-link {
-        display: flex;
-    }
-
-    .nav-bar-link ul {
-        align-items: center;
-        display: flex;
-        flex-direction: row;
-        height: 100%;
-        width: 100%;
-    }
-
-    .nav-bar-link li {
-        margin: 0px 10px;
-    }
-
-    /* Ajustando primer seccion */
-    #products {
-        flex-direction: row;
-        text-align: left;
-    }
-
-    #products div {
-        width: 30vw;
-    }
-
-    .graphic img {
-        width: 100%;
-    }
-
-    .products p {
-        width: 60%;
-    }
-
-    /* Ajustando contenedores de la segunda seccion */
-    #about {
-        flex-direction: row;
-        text-align: left;
-        align-items: normal;
-    }
-
-    .about-column {
-        margin: 0px 50px;
-    }
-
-    /* Ajustando listado de puntos */
-    .point-title {
-        background-color: inherit;
-    }
-
-    .point-number {
-        margin: 0px 20px;
-        padding: 10px;
-    }
-
-    .point-txt {
-        margin-left: 110px;
-    }
-
-    /* Ajustando contactos */
-    .opinion-container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .opinion {
-        width: 20vw;
-    }
-
-    /* Ocultamos navegacion del slide de contactos */
-    .nav-slide {
-        display: none;
-    }
-
-    .opinion {
-        display: block;
-    }
-
-    /* Ajustando el footer */
-    .team {
-        align-items: center;
-        display: flex;
-        justify-content: space-between;
-    }
-
-    .team h2 {
-        text-align: left;
-        width: 450px;
-        margin: 0px 10vw;
-    }
-
-    .team button {
-        margin: 0px 10vw;
-    }
-
-    .info {
-        align-items: center;
-        display: flex;
-        flex-direction: row-reverse;
-        justify-content: center;
-    }
-
-    .info .cell {
-        margin: 0px auto;
-    }
-
-    /* Form y copyright al final */
-    /* Formulario */
-    .info :nth-child(1) {
-        order: 2;
-    }
-
-    /* Copyright */
-    .info :nth-child(4) {
-        order: 1;
-    }
-
-    /* Links */
-    .info :nth-child(2) {
-        order: 3;
-    }
-
-    /* Logo y redes sociales */
-    .info :nth-child(3) {
-        order: 4;
-    }
-
-    .social-logo {
-        align-items: center;
-        display: flex;
-        flex-direction: column-reverse;
-        justify-content: center;
-    }
-
-    .cell .copyright {
-        bottom: -60px;
-        position: relative;
-    }
-
-    .info .form {
-        top: -15px;
-        position: relative;
-        right: -200px;
-    }
-
-    .cell nav,
-    .social-logo{
-        right: -200px;
-        position: relative;
-    }
 }

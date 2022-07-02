@@ -6,7 +6,7 @@ const dots = document.getElementsByClassName("dot");
 var slideIndex = 1;
 
 toggleBttn.addEventListener('click', () => {
-    navBarLink.classList.toggle('active')
+    navBarLink.classList.toggle('active');
 });
 
 // Funciones para el slide
@@ -42,8 +42,12 @@ function showSlide(number) {
         slide[i].style.display = "none";
     };
 
+    // Se oculta el que esta visible actualmente
+    const slideActive = document.getElementsByClassName('active-opinion')[0];
+    slideActive.classList.remove('active-opinion')
+    
     // Se muestra el slide del boton seleccionado
-    slide[slideIndex - 1].style.display = "block";
+    slide[slideIndex - 1].classList.add('active-opinion');
 
     // Elimino el que esta activo
     dotActive = document.getElementsByClassName('dot-active')[0];

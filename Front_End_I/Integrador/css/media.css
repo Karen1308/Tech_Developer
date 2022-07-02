@@ -1,0 +1,249 @@
+@media(max-width: 900px) {
+    section{
+        padding: 20px;
+        width: 100%;
+    }
+
+    .graphic img{
+        width: 80vw;
+    }
+}
+
+/********* MEDIA MIN 1440px - ESCRITORIO *********/
+@media(min-width: 1440px) {
+    section {
+        margin: 10px 10%;
+        width: auto;
+    }
+
+    h1 {
+        font-size: 4rem;
+    }
+
+    h2 {
+        font-size: 2.5rem;
+    }
+
+    /* Ajustando encabezado y barra de navegacion */
+    header {
+        height: auto;
+    }
+
+    .nav-bar {
+        align-items: center;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 0px 10%;
+        height: auto;
+    }
+
+    .nav-bar .logo {
+        position: inherit;
+    }
+
+    .nav-bar-link {
+        align-items: center;
+        animation: none;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        position: inherit;
+        width: auto;
+    }
+
+    .nav-bar-link ul {
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .nav-bar-link li {
+        margin: 0px 10px;
+        padding-bottom: 0px;
+        overflow: hidden;
+    }
+
+    .nav-bar-link li a {
+        color: rgb(0, 0, 0);
+        transition: none;
+    }
+
+    .nav-bar-link li:hover {
+        background-color: transparent;
+        transform: none;
+        translate: none;
+    }
+
+    /* Pasa de circulo a una linea con el hover */
+    .nav-bar-link li .circle {
+        background: transparent;
+        border-radius: 100%;
+        border-top: transparent;
+        height: 20px;
+        right: 100%;
+        margin: 5px 0px;
+        position: relative;
+        transition: 500ms;
+        width: 20px;
+    }
+
+    .nav-bar-link li:hover a {
+        color: var(--primary-txt-color);
+        padding-left: 0px;
+    }
+
+    .nav-bar-link li:hover .circle {
+        border-radius: 0;
+        border-top: 1px solid #000000;
+        height: 5px;
+        left: 0;
+        width: 100%;
+    }
+
+    #nav-bar-bttn {
+        display: block;
+    }
+
+    .toggle-bttn {
+        display: none;
+    }
+
+    /* Ajustando primer seccion */
+    #products {
+        flex-direction: row;
+        text-align: left;
+    }
+
+    #products div {
+        width: 30vw;
+    }
+
+    .graphic img {
+        width: 100%;
+    }
+
+    .products p {
+        width: 60%;
+    }
+
+    /* Ajustando contenedores de la segunda seccion */
+    #about {
+        flex-direction: row;
+        text-align: left;
+        align-items: normal;
+    }
+
+    .about-column {
+        margin: 0px 50px;
+    }
+
+    /* Ajustando listado de puntos */
+    .point-title {
+        background-color: inherit;
+    }
+
+    .point-number {
+        margin: 0px 20px;
+        padding: 10px;
+    }
+
+    .point-txt {
+        margin-left: 110px;
+    }
+
+    /* Ajustando contactos */
+    .opinion-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    /* Mostramos todas las opiniones */
+    .opinion {
+        display: block;
+        width: 30%;
+    }
+
+    /* Sacamos la animacion */
+    .active-opinion{
+        animation: none;
+    }
+
+    /* Ocultamos navegacion del slide de contactos */
+    .nav-slide {
+        display: none;
+    }
+
+    /* Ajustando el footer */
+    .team {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .team h2 {
+        text-align: left;
+        width: 450px;
+        margin: 0px 10vw;
+    }
+
+    .team button {
+        margin: 0px 10vw;
+    }
+
+    .info {
+        align-items: center;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+    }
+
+    .info .cell {
+        margin: 0px auto;
+    }
+
+    /* Form y copyright al final */
+    /* Formulario */
+    .info :nth-child(1) {
+        order: 2;
+    }
+
+    /* Copyright */
+    .info :nth-child(4) {
+        order: 1;
+    }
+
+    /* Links */
+    .info :nth-child(2) {
+        order: 3;
+    }
+
+    /* Logo y redes sociales */
+    .info :nth-child(3) {
+        order: 4;
+    }
+
+    .social-logo {
+        align-items: center;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+    }
+
+    .cell .copyright {
+        bottom: -60px;
+        position: relative;
+    }
+
+    .info .form {
+        top: -15px;
+        position: relative;
+        right: -200px;
+    }
+
+    .cell nav,
+    .social-logo {
+        right: -200px;
+        position: relative;
+    }
+}

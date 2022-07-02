@@ -9,6 +9,8 @@
 
     <!-- Estilos  -->
     <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/media.css">
+    <link rel="stylesheet" href="./css/keyframes.css">
 </head>
 
 <body>
@@ -17,20 +19,26 @@
     <!----------------------------->
     <header>
         <nav class="nav-bar flex-center">
+            <!-- Logo de la pagina -->
             <div class="logo">
                 <a href="./index.html"><img src="./img/logo.svg" alt=""></a>
             </div>
+            <!-- Menu con los links -->
             <div class="nav-bar-link" id="nav-bar-link">
                 <ul>
-                    <li><a href="#">Pricing</a></li>
-                    <li><a href="#">Product</a></li>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Careers</a></li>
-                    <li><a href="#">Community</a></li>
+                    <!-- <div id="btn"><span class="noselect">Hello</span><div id="circle"></div> -->
+                    <li><a href="#">Pricing</a><div class="circle"></li>
+                    <li><a href="#">Product</a><div class="circle"></li>
+                    <li><a href="#">About Us</a><div class="circle"></li>
+                    <li><a href="#">Careers</a><div class="circle"></li>
+                    <li><a href="#">Community</a><div class="circle"></li>
                 </ul>
             </div>
+            <!-- Boton en el menu -->
             <button id="nav-bar-bttn">Get Started</button>
-            <a href="#" class="toggle-bttn" id="toggle-bttn">
+
+            <!-- Icono hamburguesa para mobile -->
+            <a class="toggle-bttn" id="toggle-bttn">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -60,6 +68,8 @@
             <p>Manage provides all the functionality your teas needs, without the complexity. Our software is
                 tailor-made for modern digital product teams</p>
         </div>
+
+        <!-- Lista de los diferntes puntos de la pregunta -->
         <div class="about-column list-points">
             <div class="point">
                 <div class="point-title">
@@ -150,7 +160,7 @@
 
         <!-- Botones circulares para el slide -->
         <div class="nav-slide" id="nav-slide">
-            <!-- Se crean de forma dinamica con javascrip -->
+            <!-- Se crean de forma dinamica con js -->
         </div>
 
         <div class="bttn-get">
@@ -166,35 +176,56 @@
         </div>
         <div class="info">
             <div class="cell form">
+                <!-- Formulario -->
                 <form action="">
                     <input type="text" name="inbox" id="inbox" value="Update in your inbox...">
                     <button type="submit">Go</button>
                 </form>
             </div>
             <div class="cell">
+                <!-- Links en el footer -->
                 <nav>
                     <ul>
-                        <li>Home</li>
-                        <li>Pricing</li>
-                        <li>Products</li>
-                        <li>About Us</li>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Pricing</a></li>
+                        <li><a href="#">Products</a></li>
+                        <li><a href="#">About Us</a></li>
                     </ul>
                     <ul>
-                        <li>Careers</li>
-                        <li>Community</li>
-                        <li>Privacy Policy</li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Community</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
                     </ul>
                 </nav>
             </div>
+
+            <!-- Redes sociales -->
             <div class="cell social-logo">
-                <div class="social-media">
-                    <a href=""><img src="./img/icons/icon-facebook.svg" alt=""></a>
-                    <a href=""><img src="./img/icons/icon-youtube.svg" alt=""></a>
-                    <a href=""><img src="./img/icons/icon-twitter.svg" alt=""></a>
-                    <a href=""><img src="./img/icons/icon-pinterest.svg" alt=""></a>
-                    <a href=""><img src="./img/icons/icon-instagram.svg" alt=""></a>
+                <ul class="social-media">
+                    <li class="icon facebook">
+                        <span class="tooltip">Facebook</span>
+                        <span><i class="fab fa-facebook-f"></i></span>
+                    </li>
+                    <li class="icon youtube">
+                        <span class="tooltip">Youtube</span>
+                        <span><i class="fab fa-youtube"></i></span>
+                    </li>
+                    <li class="icon twitter">
+                        <span class="tooltip">Twitter</span>
+                        <span><i class="fab fa-twitter"></i></span>
+                    </li>
+                    <li class="icon pinterest">
+                        <span class="tooltip">Pinterest</span>
+                        <span><i class="fab fa-pinterest"></i></span>
+                    </li>
+                    <li class="icon instagram">
+                        <span class="tooltip">Instagram</span>
+                        <span><i class="fab fa-instagram"></i></span>
+                    </li>
+                </ul>
+                <div class="logo">
+                    <a href="./index.html"><img src="./img/logo_invert.svg" alt="" class="logo"></a>
                 </div>
-                <img src="./img/logo.svg" alt="" class="logo">
             </div>
             <div class="cell">
                 <p class="copyright">Copyright 2020. All Rights Reserved</p>
@@ -204,6 +235,9 @@
 
     <!-- Index -->
     <script src="./js/index.js" crossorigin="anonymous"></script>
+
+    <!-- Iconos -->
+    <script src="https://kit.fontawesome.com/99a2b445a2.js" crossorigin="anonymous"></script>
 </body>
 
 </html>

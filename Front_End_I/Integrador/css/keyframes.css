@@ -1,0 +1,17 @@
+@keyframes displayToLeft {
+    from {
+        margin-left: 100%;
+        opacity: 0;
+    }
+
+    to {
+        margin-left: 0%;
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-500px);
+    }
+}
