@@ -1,0 +1,97 @@
+@use "variables" as v;
+
+/**** SECCIONES ***/
+.featured {
+    text-align: center;
+}
+
+.featured h1 {
+    font-size: 3rem;
+}
+
+.featured img {
+    width: 100px;
+    height: 100px;
+}
+
+.featured-nav-bar {
+    margin: 10px;
+}
+
+.featured nav a,
+.featured nav p {
+    color: #666666;
+    margin: 0px 10px;
+}
+
+.article {
+    margin: 10px;
+    width: 250px;
+    text-align: center;
+    background: #FBFAF6;
+}
+
+.article p {
+    margin: 10px;
+}
+
+.article img {
+    width: 100%;
+}
+
+.article-name {
+    color: #3C2313;
+}
+
+.article-price {
+    color: v.$primary-bg-color;
+}
+
+/**** FORMULARIO DE CONTACTOS ***/
+.form-contact form {
+    display: block;
+}
+
+form input {
+    width: 100%;
+    height: 50px;
+    margin: 10px;
+    background-color: v.$second-bg-color;
+    border: none;
+    border-radius: 15px;
+    color: v.$primary-txt-color;
+    text-indent: 20px;
+}
+
+form input:focus::placeholder {
+    color: transparent;
+}
+
+.form-bttns {
+    margin: 20px;
+    text-align: center;
+}
+
+.form-bttns button {
+    width: 120px;
+    height: 40px;
+    color: v.$primary-txt-color;
+}
+
+button[type=reset] {
+    background: #8A8787;
+}
+
+button[type=reset]:hover {
+    background: #545151;
+    cursor: pointer;
+}
+
+button[type=submit] {
+    background:  v.$second-bg-color;
+}
+
+button[type=submit]:hover {
+    background:  v.$second-bg-color;
+    cursor: pointer;
+}

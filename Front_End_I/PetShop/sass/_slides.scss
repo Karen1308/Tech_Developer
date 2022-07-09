@@ -1,0 +1,47 @@
+@use "variables" as v;
+@import "mixins";
+
+/**** BANNER INICIAL ***/
+#section-banner {
+    width: 100vw;
+    margin-bottom: 50px;
+}
+
+.banner {
+    background-image: url('../img/banner.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100vw;
+    height: 500px;
+    @include divFlex(flex-end,center);
+    padding-right: 100px;
+}
+
+.banner-info {
+    position: relative;
+}
+
+.banner-title {
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 2rem;
+    color: v.$second-bg-color;
+    margin: 10px 0px;
+}
+
+.banner-text {
+    font-size: 1rem;
+}
+
+.banner button {
+    font-size: 1rem;
+    background: v.$primary-bg-color;
+    border-radius: 5px;
+    padding: 10px;
+    text-transform: uppercase;
+    width: 150px;
+    height: 50px;
+    color: v.$primary-txt-color;
+}

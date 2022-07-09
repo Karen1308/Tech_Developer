@@ -1,0 +1,110 @@
+@use "variables" as v;
+@import "mixins";
+
+/**** PIE DE PAGINA ***/
+footer {
+    background: v.$second-bg-color;
+    color: v.$primary-txt-color;
+    text-align: center;
+}
+
+.suscription {
+    @include divFlex(space-between,center);
+    flex-wrap: nowrap;
+    height: 60px;
+    background: v.$primary-bg-color;
+    padding: 40px;
+}
+
+.sus-txt {
+    @include divFlex('',center);
+}
+
+.sus-txt img {
+    width: 80px;
+}
+
+.sus-txt p {
+    margin: 0px 20px;
+}
+
+.sus-form input[type=email] {
+    width: 400px;
+    height: 40px;
+    background-color: #ffffff;
+    color: #A0A0A0;
+    text-indent: 20px;
+}
+
+.sus-form button {
+    width: 120px;
+    height: 40px;
+    padding: 0px 10px;
+    background-color: v.$second-bg-color;
+    color: #ffffff;
+}
+
+.sus-form button:hover {
+    background: #ffffff;
+    color: #3C2313;
+    cursor: pointer;
+}
+
+.more-info {
+    height: auto;
+    margin: 20px;
+    @include divFlex(space-between,center);
+}
+
+.info {
+    margin-left: 100px;
+}
+
+.line-info {
+    display: flex;
+    margin: 20px 0px;
+}
+
+.line-icon {
+    width: 80px;
+    height: 80px;
+    background-color: #8A8787;
+    border-radius: 100%;
+    @include divFlex(center,center);
+    border: 6px solid #786960;
+}
+
+.line-icon img {
+    width: 80%;
+    height: 80%;
+    padding: 10px;
+}
+
+.line-info-txt {
+    margin: 0px 10px;
+    text-align: left;
+}
+
+.line-info-txt p:first-child {
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+.line-info-txt p {
+    font-size: .7rem;
+    margin: 10px 0px;
+}
+
+.more-info .logo {
+    margin-right: 200px;
+}
+
+.more-info .logo img {
+    width: 400px;
+}
+
+.copyright {
+    background-color: black;
+    font-size: .7rem;
+    padding: 10px;
+}

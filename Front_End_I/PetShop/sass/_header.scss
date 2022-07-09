@@ -1,0 +1,86 @@
+@use "variables" as v;
+@import "mixins";
+
+/**** ENCABEZADO ***/
+.offers {
+    @include divFlex(space-between,'');
+    height: 30px;
+    background: rgb(20, 20, 20);
+    color: v.$primary-txt-color;
+    padding: 5px;
+}
+
+.offers p {
+    margin-left: 100px;
+    font-size: .7rem;
+}
+
+.off-select {
+    margin-right: 50px;
+}
+
+.off-select select {
+    color: v.$primary-txt-color;
+    background: none;
+    border: none;
+}
+
+/**** BARRA DE NAVEGACION ***/
+.nav-bar {
+    height: 70px;
+    background: v.$primary-bg-color;
+    @include divFlex(space-between,'');
+}
+
+.nav-bar .logo {
+    margin: auto 0px;
+    margin-left: 30px;
+}
+
+.nav-bar-link {
+    margin-right: 30px;
+}
+
+.nav-bar-link ul {
+    height: 100%;
+    @include divFlex('',center);
+}
+
+.nav-bar-link li {
+    @include divFlex('',center);
+    height: 100%;
+    margin: 0px 10px;
+    padding: 0px 10px;
+    color: v.$primary-txt-color;
+}
+
+.nav-bar-link li i {
+    margin-right: 10px;
+}
+
+.nav-bar-link li a {
+    color: v.$primary-txt-color;
+}
+
+.nav-bar .nav-bar-link li:hover {
+    background: v.$link-nav-bar-hover;
+}
+
+/**** HAMBURGER - ICON MOBILE ***/
+.toggle-bttn {
+    position: absolute;
+    top: 3.4rem;
+    right: 2rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+}
+
+.toggle-bttn .bar {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
